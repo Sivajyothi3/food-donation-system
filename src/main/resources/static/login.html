@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<header><h2>Login</h2></header>
+
+<div class="container">
+    <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" required>
+
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Password" required>
+            <span onclick="togglePassword('password', this)">👁</span>
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>

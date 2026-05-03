@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header>
+        <h2 id="welcomeText">Welcome</h2>
+    </header>
+
+    <div class="container">
+        <div class="top-buttons">
+            <input type="text" id="search" placeholder="Search NGO by name">
+            <button onclick="loadNGOs()">Refresh</button>
+            <button onclick="window.location.href='user-donations.html'">My Donations</button>
+            <button onclick="window.location.href='user-profile.html'">My Profile</button>
+        </div>
+
+        <div id="ngoList"></div>
+    </div>
+
+    <script src="js/user.js"></script>
+</body>
+</html>

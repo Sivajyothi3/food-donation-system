@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<header>User Profile</header>
+
+<div class="container">
+
+    <div id="profile" class="card"></div>
+
+    <button onclick="showEdit()">Edit Profile</button>
+    <button onclick="showPassword()">Change Password</button>
+
+    <!-- EDIT -->
+    <div id="editSection" class="card" style="display:none;">
+        <h3>Edit Profile</h3>
+
+        <input type="text" id="editName" placeholder="Name">
+        <input type="text" id="editPhone" placeholder="Phone">
+
+        <button onclick="updateProfile()">Save Changes</button>
+    </div>
+
+    <!-- PASSWORD -->
+    <div id="passwordSection" class="card" style="display:none;">
+    <h3>Change Password</h3>
+
+    <div class="password-box">
+        <input type="password" id="oldPass" placeholder="Old Password">
+        <span onclick="togglePassword('oldPass', this)">👁</span>
+    </div>
+
+    <div class="password-box">
+        <input type="password" id="newPass" placeholder="New Password">
+        <span onclick="togglePassword('newPass', this)">👁</span>
+    </div>
+
+    <button onclick="changePassword()">Update Password</button>
+</div>
+
+    <br>
+
+    <!-- BACK BUTTON -->
+    <button onclick="goBack()">Back to Dashboard</button>
+
+    <!-- ✅ NEW LOGOUT BUTTON -->
+    <button onclick="logout()" style="background:red;">Logout</button>
+
+</div>
+
+
+<script src="js/user-profile.js"></script>
+
+</body>
+</html>

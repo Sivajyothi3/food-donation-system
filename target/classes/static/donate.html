@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donate</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<header><h2>Donate</h2></header>
+
+<div class="container">
+
+<form id="donateForm">
+
+    <label>Donation Type</label>
+    <select id="type" onchange="toggleAmount(); toggleFoodFields();">
+        <option value="FOOD">Food</option>
+        <option value="MONEY">Money</option>
+    </select>
+
+    <!-- ✅ FOOD FIELDS -->
+    <div id="foodDiv">
+        <label>Food Type</label>
+        <select id="foodType">
+            <option value="COOKED">Cooked</option>
+            <option value="RAW">Raw</option>
+        </select>
+
+        <label>Quantity (persons)</label>
+        <input type="number" id="quantity" placeholder="Enter number of persons">
+    </div>
+
+    <!-- ✅ MONEY FIELD -->
+    <div id="amountDiv" style="display:none;">
+        <input type="number" id="amount" placeholder="Enter Amount">
+    </div>
+
+    <label>Delivery Type</label>
+    <select id="delivery" onchange="toggleAddress()">
+        <option value="SELF">Self</option>
+        <option value="PICKUP">Pickup</option>
+    </select>
+
+    <div id="addressDiv" style="display:none;">
+        <input type="text" id="address" placeholder="Pickup Address">
+    </div>
+
+    <label>Date & Time</label>
+    <input type="datetime-local" id="date" required>
+
+    <label>Contact Name</label>
+    <input type="text" id="name" required>
+
+    <label>Phone</label>
+    <input type="text" id="phone" required>
+
+    <button type="submit">Donate</button>
+
+</form>
+
+</div>
+
+<script src="js/donate.js"></script>
+
+</body>
+</html>

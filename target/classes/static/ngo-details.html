@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> <!-- ✅ VERY IMPORTANT -->
+    <title>NGO Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<header>NGO Details</header>
+
+<div class="container">
+
+    <!-- NGO DETAILS -->
+    <div id="details" class="card"></div>
+
+    <!-- ONLY ONE DONATE BUTTON -->
+    <div style="text-align:center;">
+        <button onclick="goDonate()">Donate</button>
+    </div>
+
+</div>
+
+<script src="js/user.js"></script>
+
+<script>
+function goDonate() {
+    window.location.href = "donate.html";
+}
+</script>
+
+</body>
+</html>

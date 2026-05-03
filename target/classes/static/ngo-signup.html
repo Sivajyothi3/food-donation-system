@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NGO Signup</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<header><h2>NGO Signup</h2></header>
+
+<div class="container">
+<form id="ngoForm" enctype="multipart/form-data">
+
+    <input type="text" id="name" placeholder="NGO Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+
+    <div class="password-box">
+        <input type="password" id="password" placeholder="Password" required>
+        <span onclick="togglePassword('password', this)">👁</span>
+    </div>
+
+    <input type="text" id="phone" placeholder="Phone" required>
+    <input type="text" id="address" placeholder="Address" required>
+    <input type="text" id="state" placeholder="State" required>
+
+    <input type="text" id="reg" placeholder="Registration Number" required>
+    <input type="text" id="desc" placeholder="Description">
+    <input type="text" id="contact" placeholder="Contact Person" required>
+
+    <label>Govt Certificate</label>
+    <input type="file" id="govt" required>
+
+    <label>PAN Card</label>
+    <input type="file" id="pan" required>
+
+    <button type="submit">Register NGO</button>
+</form>
+</div>
+
+<script src="js/ngo.js"></script>
+</body>
+</html>

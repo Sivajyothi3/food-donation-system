@@ -1,0 +1,161 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 18px; /* ⭐ ADD THIS */
+
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url("../images/bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    background: rgba(237, 135, 19, 0.9);
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+    width: 95%;
+    max-width: 1100px; /* increased */
+    margin: 40px auto;
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/* CARD (UPGRADED) */
+.card {
+    background: #fff;
+    color: #000;
+    padding: 25px; /* increased */
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+.card p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+/* STATUS BADGES */
+.status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* BUTTON GROUP */
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    min-width: 200px; /* ⭐ FIX ALIGNMENT */
+}
+
+/* INPUTS */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: none;
+    height: 45px; /* ⭐ FIX */
+}
+
+/* BUTTON */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #ff9800;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e68900;
+}
+
+/* LINKS */
+a {
+    color: #ff9800;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   PASSWORD FIELD FIX
+========================= */
+.password-box {
+    position: relative;
+    width: 100%;
+}
+
+.password-box input {
+    width: 100%;
+    height: 45px;
+    padding: 10px 40px 10px 10px; /* space for eye */
+    margin: 8px 0;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+}
+
+.password-box span {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+.password-box span:hover {
+    color: #ff9800;
+}

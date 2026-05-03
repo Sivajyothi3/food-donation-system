@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<header>
+    <h2>User Signup</h2>
+</header>
+
+<div class="container">
+
+    <p id="message" style="text-align:center; font-weight:bold;"></p>
+
+    <form id="signupForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Password" required>
+            <span onclick="togglePassword('password', this)">👁</span>
+        </div>
+
+        <button type="submit">Signup</button>
+    </form>
+
+    <p style="text-align:center; margin-top:15px;">
+        Already have an account?
+        <a href="login.html">Login here</a>
+    </p>
+
+</div>
+
+<script src="js/auth.js"></script>
+
+</body>
+</html>

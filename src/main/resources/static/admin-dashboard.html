@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<header>
+    <h2 id="welcomeText">Welcome</h2>
+</header>
+
+<div class="container">
+
+    <div class="top-buttons">
+        <button onclick="loadPending()">Pending</button>
+        <button onclick="loadApproved()">Approved</button>
+        <button onclick="loadRejected()">Rejected</button>
+
+        <!-- ✅ LOGOUT BUTTON -->
+        <button onclick="logout()" style="background:red;">Logout</button>
+    </div>
+
+    <div id="data"></div>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

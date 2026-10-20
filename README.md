@@ -2,6 +2,10 @@
 
 A full-stack web application designed to reduce food waste and connect donors with NGOs efficiently.
 
+**🌐 Live Demo:** https://food-donation-system-ldkg.onrender.com/
+
+*Note: The first request may take some time while the free hosting service wakes up.*
+
 ---
 
 ## 🌍 Project Overview

@@ -11,7 +11,7 @@ async function loadNGOs() {
     displayNGOs(ngos);
 }
 
-// DISPLAY (CARD STYLE)
+// DISPLAY NGOs
 function displayNGOs(list) {
 
     const container = document.getElementById("ngoList");
@@ -25,7 +25,6 @@ function displayNGOs(list) {
     }
 
     list.forEach(ngo => {
-
         container.innerHTML += `
             <div class="card">
                 <h3>${ngo.name}</h3>
@@ -34,13 +33,15 @@ function displayNGOs(list) {
         `;
     });
 }
-// ✅ SET WELCOME MESSAGE
+
+// ✅ SAFE WELCOME (FIXED)
 function setWelcome() {
     const user = JSON.parse(localStorage.getItem("user"));
 
-    if (user && user.name) {
-        document.getElementById("welcomeText").innerText =
-            `Hello ${user.name}, Welcome Back 👋`;
+    const welcomeEl = document.getElementById("welcomeText");
+
+    if (user && user.name && welcomeEl) {
+        welcomeEl.innerText = `Hello ${user.name}, Welcome Back 👋`;
     }
 }
 
@@ -61,12 +62,15 @@ function viewNGO(id) {
     window.location.href = "ngo-details.html";
 }
 
-// LOAD DETAILS PAGE
+// LOAD NGO DETAILS
 async function loadNGODetails() {
 
     const ngoId = localStorage.getItem("ngoId");
 
-    if (!ngoId) return;
+    if (!ngoId) {
+        document.getElementById("details").innerHTML = "<p>No NGO selected</p>";
+        return;
+    }
 
     const res = await fetch(`${BASE_URL}/ngos/approved`);
     const ngos = await res.json();
@@ -90,19 +94,18 @@ async function loadNGODetails() {
     `;
 }
 
-// GO DONATE
-function goDonate() {
-    window.location.href = "donate.html";
-}
-
 // AUTO LOAD
 window.onload = () => {
 
-    setWelcome(); // ✅ ADD THIS
+    setWelcome(); // ✅ now safe
 
     if (document.getElementById("ngoList")) {
         loadNGOs();
-        document.getElementById("search").addEventListener("input", searchNGO);
+
+        const search = document.getElementById("search");
+        if (search) {
+            search.addEventListener("input", searchNGO);
+        }
     }
 
     if (document.getElementById("details")) {

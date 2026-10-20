@@ -200,7 +200,7 @@ application-local.properties
 Add:
 
 ```
-spring.datasource.url=jdbc:mysql://localhost:3306/food_donation
+spring.datasource.url=jdbc:mysql://localhost:3306/food_donation_db
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 ```
@@ -210,14 +210,13 @@ spring.datasource.password=your_password
 ### 3️⃣ Run Backend
 
 ```bash
-mvn spring-boot:run
+mvn spring-boot:run "-Dspring-boot.run.profiles=local"
 ```
 
 ---
 
-### 4️⃣ Open Frontend
-
-Open `index.html` in browser
+### 4️⃣ Open the application in your browser:
+http://localhost:8080
 
 ---
 
